@@ -10,7 +10,7 @@ const PersonPage = ({ match }) => {
     getPerson(match.params.id).then(data => {
       setPerson(data.person);
     });
-  }, []);
+  }, [match.params.id]);
 
   return (
     <div className={styles.personPage}>
