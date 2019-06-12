@@ -6,7 +6,7 @@ const LandingPage = () => {
     <div className={styles.landing}>
       <div className={styles.contentWrapper}>
         <h1>Welcome to the Star Wars API</h1>
-        <p>This projet was built using create-react-app and GraphQL</p>
+        <p>This project was built using create-react-app and GraphQL</p>
         <p>
           Data is fetched from the Star Wars API:{" "}
           <a href="https://swapi.co/">https://swapi.co/</a>
