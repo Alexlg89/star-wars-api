@@ -16,10 +16,16 @@ const Person = ({ person, full }) => {
             <div>Haircolor: {person.hair_color}</div>
             <div>Skincolor: {person.skin_color}</div>
             <div>Eyecolor: {person.eye_color}</div>
+            <div>
+              Species:{" "}
+              <Link to={`/species/${person.species.id}`}>
+                {person.species.name}
+              </Link>
+            </div>
           </>
         ) : (
           <div className={styles.linkWrapper}>
-            <Link to={`/person/${person.id}`}>More</Link>
+            <Link to={`/persons/${person.id}`}>More</Link>
           </div>
         )}
       </Card>

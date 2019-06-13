@@ -1,16 +1,18 @@
 import express from "express";
-import graphqlHTTP from "express-graphql";
-import root from "./graphql/root";
-import schema from "./graphql/schema";
+import graphql from "express-graphql";
+import { makeExecutableSchema } from "graphql-tools";
+import typeDefs from "./graphql/typeDefs";
+import resolvers from "./graphql/resolvers";
 
 const app = express();
 
+const schema = makeExecutableSchema({ typeDefs, resolvers });
+
 app.use(
   "/graphql",
-  graphqlHTTP({
-    schema: schema,
-    rootValue: root,
-    graphiql: true
+  graphql({
+    graphiql: true,
+    schema
   })
 );
 

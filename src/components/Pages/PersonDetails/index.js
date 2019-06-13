@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { getPerson } from "../../graphql/queries";
-import Person from "../Person";
+import { getPerson } from "../../../graphql/queries";
+import Person from "../../Person";
 import styles from "./style.module.scss";
 
-const PersonPage = ({ match }) => {
+const PersonDetails = ({ match }) => {
   const [person, setPerson] = useState(null);
 
   useEffect(() => {
@@ -14,9 +14,10 @@ const PersonPage = ({ match }) => {
 
   return (
     <div className={styles.personPage}>
+      <h1>Persons</h1>
       {person ? <Person full person={person} /> : <div>Loading</div>}
     </div>
   );
 };
 
-export default PersonPage;
+export default PersonDetails;

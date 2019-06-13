@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./style.module.scss";
 
-const LandingPage = () => {
+const Landing = () => {
   return (
     <div className={styles.landing}>
       <div className={styles.contentWrapper}>
@@ -17,4 +17,4 @@ const LandingPage = () => {
   );
 };
 
-export default LandingPage;
+export default Landing;

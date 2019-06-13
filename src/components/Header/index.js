@@ -9,6 +9,7 @@ const Header = () => {
       <div className={styles.navbar}>
         <Link to={"/"}>Home</Link>
         <Link to={"/persons"}>Persons</Link>
+        <Link to={"/species"}>Species</Link>
       </div>
     </div>
   );
