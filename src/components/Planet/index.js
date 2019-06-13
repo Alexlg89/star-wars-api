@@ -1,19 +1,10 @@
 import React from "react";
 import Card from "../Card";
 import { Link } from "react-router-dom";
+import PersonLinkList from "../Person/PersonLinkList";
 import styles from "./style.module.scss";
 
 const Planet = ({ planet, full }) => {
-  const printPersons = persons => {
-    return persons.map(person => {
-      return (
-        <span className={styles.personLink}>
-          <Link to={`/persons/${person.id}`}>{person.name}</Link>
-        </span>
-      );
-    });
-  };
-
   return (
     <>
       <Card title={planet.name}>
@@ -26,7 +17,9 @@ const Planet = ({ planet, full }) => {
             <div>Diameter: {planet.diameter}</div>
             <div>Gravity: {planet.gravity}</div>
             <div>Surface water: {planet.surface_water}</div>
-            <div>People: {printPersons(planet.persons)}</div>
+            <div>
+              People: <PersonLinkList persons={planet.persons} />
+            </div>
           </>
         ) : (
           <div className={styles.linkWrapper}>
