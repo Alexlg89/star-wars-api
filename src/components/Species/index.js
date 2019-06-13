@@ -18,9 +18,11 @@ const Species = ({ species, full }) => {
             <div>Eyecolors: {species.eye_color}</div>
             <div>Average lifespan: {species.average_lifespan}</div>
             <div>Language: {species.language}</div>
-            <div>
-              People: <PersonLinkList persons={species.persons} />
-            </div>
+            {species.persons.length > 0 && (
+              <div>
+                People: <PersonLinkList persons={species.persons} />
+              </div>
+            )}
           </>
         ) : (
           <div className={styles.linkWrapper}>

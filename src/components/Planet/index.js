@@ -17,9 +17,11 @@ const Planet = ({ planet, full }) => {
             <div>Diameter: {planet.diameter}</div>
             <div>Gravity: {planet.gravity}</div>
             <div>Surface water: {planet.surface_water}</div>
-            <div>
-              People: <PersonLinkList persons={planet.persons} />
-            </div>
+            {planet.persons.length > 0 && (
+              <div>
+                People: <PersonLinkList persons={planet.persons} />
+              </div>
+            )}
           </>
         ) : (
           <div className={styles.linkWrapper}>
