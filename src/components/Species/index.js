@@ -26,7 +26,7 @@ const Species = ({ species, full }) => {
             <div>Skincolors: {species.skin_colors}</div>
             <div>Eyecolors: {species.eye_color}</div>
             <div>Average lifespan: {species.average_lifespan}</div>
-            <div>language: {species.language}</div>
+            <div>Language: {species.language}</div>
             <div>People: {printPersons(species.persons)}</div>
           </>
         ) : (

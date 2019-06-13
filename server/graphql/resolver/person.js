@@ -21,3 +21,11 @@ export const getPerson = id => {
 export const getPersonsBySpecies = speciesId => {
   return persons.filter(person => person.species === speciesId);
 };
+
+/**
+ * Persons by planet resolver
+ * @param {Int} planetId
+ */
+export const getPersonsByHomeworld = planetId => {
+  return persons.filter(person => person.homeworld === planetId);
+};

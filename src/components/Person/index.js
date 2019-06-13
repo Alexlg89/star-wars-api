@@ -22,6 +22,12 @@ const Person = ({ person, full }) => {
                 {person.species.name}
               </Link>
             </div>
+            <div>
+              Homeworld:{" "}
+              <Link to={`/planets/${person.homeworld.id}`}>
+                {person.homeworld.name}
+              </Link>
+            </div>
           </>
         ) : (
           <div className={styles.linkWrapper}>
