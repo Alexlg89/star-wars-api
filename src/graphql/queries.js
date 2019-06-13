@@ -2,7 +2,7 @@
  * Get all persons
  */
 export const getPersons = async () => {
-  return query("{ persons { id, name gender birth_year } }");
+  return query("{ persons { id name gender birth_year } }");
 };
 
 /**
